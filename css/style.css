@@ -1,124 +1,124 @@
-  /*
-  COLORS:
+/*
+COLORS:
 
-  Light green: #7ed56f
-  Medium green: #55c57a
-  Dark green: #29b485
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #29b485
 
-  */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  /* vh = viewport | 95% of the viewport */
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(41, 180, 133, 0.8)),
+  url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* background-position: center; */
+  position: relative;
+
+  /* clip-path: polygon(x y, x y, x y, x y) */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* This removes the shaking after the animation is complete */
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  /* Below is for the @keyframes animation */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  /* animation-iteration-count: 3; */
+  /* animation-delay: 3s; */
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700px;
+  letter-spacing: 17.4px;
+  animation: moveInRight
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    /* translateX() X axis is the horizontal line */
+    transform: translateX(-100px);
   }
 
-  body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
-    padding: 30px;
+  80% {
+    transform: translateX(10px);
   }
 
-  .header {
-    /* vh = viewport | 95% of the viewport */
-    height: 95vh;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(41, 180, 133, 0.8)),
-    url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    /* background-position: center; */
-    position: relative;
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
-    /* clip-path: polygon(x y, x y, x y, x y) */
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /* translateX() X axis is the horizontal line */
+    transform: translateX(100px);
   }
 
-  .logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
+  80% {
+    transform: translateX(-10px);
   }
 
-  .logo {
-    height: 35px;
-
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
-
-  .text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    /* This removes the shaking after the animation is complete */
-    backface-visibility: hidden;
-  }
-
-  .heading-primary-main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-
-    /* Below is for the @keyframes animation */
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 3s; */
-  }
-
-  .heading-primary-sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 700px;
-    letter-spacing: 17.4px;
-    animation: moveInRight
-  }
-
-  @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      /* translateX() X axis is the horizontal line */
-      transform: translateX(-100px);
-    }
-
-    80% {
-      transform: translateX(10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
-
-  @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      /* translateX() X axis is the horizontal line */
-      transform: translateX(100px);
-    }
-
-    80% {
-      transform: translateX(-10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translate(0);
-    }
-  }
+}
 
 
 
