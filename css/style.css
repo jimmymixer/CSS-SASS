@@ -103,22 +103,22 @@ body {
   }
 }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    /* translateX() X axis is the horizontal line */
-    transform: translateX(100px);
-  }
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      /* translateX() X axis is the horizontal line */
+      transform: translateX(100px);
+    }
 
-  80% {
-    transform: translateX(-10px);
-  }
+    80% {
+      transform: translateX(-10px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
   }
-}
 
 
 
