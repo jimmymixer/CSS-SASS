@@ -124,6 +124,23 @@ body {
 
 /* Button */
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    /* translateY() Y axis is the vertical line */
+    transform: translateY(100px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -133,6 +150,7 @@ body {
   border-radius: 100px;
   transition: all .2;
   position: relative;
+  /* animation: moveInBottom 1s ease-out; */
 }
 
 .btn:hover {
@@ -168,8 +186,14 @@ body {
 }
 
 .btn:hover::after {
-  transform: scale(1.5);
+  /* transform: scale(1.5); */
+  transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
 
 
